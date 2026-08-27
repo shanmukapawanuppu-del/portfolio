@@ -8,6 +8,11 @@
   <meta name="description" content="Portfolio of Shanmukapavan Uppu - React Native Mobile App Developer with 4+ years experience building AI-powered, HIPAA-compliant healthcare applications for iOS & Android." />
   <meta name="keywords" content="Shanmukapavan Uppu, React Native Developer, Mobile App Developer, Healthcare Apps, Telemedicine, AI Integrations, iOS, Android, Hyderabad" />
   
+  <!-- Google Fonts: Plus Jakarta Sans (Modern Clean) & Caveat (Artsy Handwritten Scrapbook) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
   <!-- Feather Icons for UI -->
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   
@@ -15,16 +20,15 @@
 </head>
 <body>
 
-  <!-- Ambient Glow Effects -->
-  <div class="bg-glow-1"></div>
-  <div class="bg-glow-2"></div>
+  <!-- Canvas Dot-Grid Background Overlay -->
+  <div class="canvas-grid-bg"></div>
 
   <!-- Header Navigation -->
   <header class="header" id="header">
     <div class="container nav-wrapper">
       <a href="#hero" class="logo" id="nav-logo">
         <span class="logo-dot"></span>
-        <span id="logo-text">Shanmuka.dev</span>
+        <span id="logo-text">shanmukapavanuppu.dev</span>
       </a>
 
       <ul class="nav-menu">
@@ -63,16 +67,27 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span id="status-text">Available for Mobile & AI Development Roles</span>
+          <div class="status-badge-wrapper">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span id="status-text">Available for Mobile & AI Development Roles</span>
+            </div>
+          </div>
+
+          <div class="handwritten-label-wrapper">
+            <span class="handwritten-tag flex-tag">
+              my name is 
+              <svg class="handwritten-arrow" width="36" height="18" viewBox="0 0 40 20" fill="none">
+                <path d="M2 10C12 4 28 4 36 12M36 12L30 8M36 12L32 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
           </div>
 
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text" id="hero-name">Shanmukapavan Uppu</span>
           </h1>
           
-          <h2 class="section-tag" id="hero-title-tag">React Native Mobile App Developer</h2>
+          <div class="section-tag-pill" id="hero-title-tag">React Native Mobile App Developer</div>
 
           <p class="hero-subtitle" id="hero-bio">
             4+ years of experience building AI-powered, HIPAA-compliant healthcare applications for iOS & Android. Specialized in EHR/HL7 interoperability, telemedicine systems, IoMT wearable integrations, and translating Figma designs into pixel-perfect mobile apps.
@@ -100,31 +115,54 @@
           </div>
         </div>
 
-        <div class="hero-avatar-wrapper">
-          <div class="avatar-card">
-            <img id="hero-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Shanmukapavan Uppu" class="avatar-img" />
-          </div>
-        </div>
+
       </div>
 
       <!-- Stats Ribbon -->
-      <div class="stats-grid" id="stats-container">
+      <div class="stats-grid artsy-card-grid" id="stats-container">
         <!-- Rendered dynamically -->
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
+  <!-- About Me Highlight Section -->
+  <section id="about" class="section-padded">
     <div class="container">
-      <div class="section-tag">
-        <i data-feather="code"></i>
-        <span>Technical Proficiency</span>
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">about me!</span>
+        <div class="section-tag">
+          <i data-feather="user"></i>
+          <span>Background & Specialty</span>
+        </div>
+        <h2 class="section-title">Architecting High-Impact Mobile Solutions</h2>
       </div>
-      <h2 class="section-title">Skills & Expertise</h2>
-      <p class="section-subtitle">
-        Specialized tech stack across mobile architecture, healthcare standards, AI/ML integrations, and real-time streaming APIs.
-      </p>
+
+      <div class="about-card artsy-card">
+        <div class="tape-strip top-left"></div>
+        <p class="about-lead">
+          I am a results-driven React Native Mobile App Developer passionate about building high-performance, accessible, and HIPAA-compliant cross-platform mobile apps for iOS and Android. 
+        </p>
+        <p class="about-body">
+          My core expertise spans telemedicine integrations with live video/chat, AI/ML face scanning vitals extraction, IoMT Bluetooth wearable connections, and building scalable mobile architectures that seamlessly handle thousands of daily active users.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padded">
+    <div class="container">
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">skills & tools!</span>
+        <div class="section-tag">
+          <i data-feather="code"></i>
+          <span>Technical Proficiency</span>
+        </div>
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">
+          Specialized tech stack across mobile architecture, healthcare standards, AI/ML integrations, and real-time streaming APIs.
+        </p>
+      </div>
 
       <div class="skills-grid" id="skills-container">
         <!-- Rendered dynamically -->
@@ -133,16 +171,19 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="section-padded">
     <div class="container">
-      <div class="section-tag">
-        <i data-feather="layers"></i>
-        <span>Featured Portfolio</span>
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">explore my work!</span>
+        <div class="section-tag">
+          <i data-feather="layers"></i>
+          <span>Featured Portfolio</span>
+        </div>
+        <h2 class="section-title">Projects & Applications</h2>
+        <p class="section-subtitle">
+          Key production mobile applications and enterprise systems built for scale.
+        </p>
       </div>
-      <h2 class="section-title">Projects & Applications</h2>
-      <p class="section-subtitle">
-        Key production mobile applications and enterprise systems built for scale.
-      </p>
 
       <!-- Category Filter Buttons -->
       <div class="project-filters" id="project-filters">
@@ -157,16 +198,19 @@
   </section>
 
   <!-- Experience & Career Timeline Section -->
-  <section id="experience">
+  <section id="experience" class="section-padded">
     <div class="container">
-      <div class="section-tag">
-        <i data-feather="briefcase"></i>
-        <span>Career Journey</span>
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">career journey!</span>
+        <div class="section-tag">
+          <i data-feather="briefcase"></i>
+          <span>Career Journey</span>
+        </div>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">
+          Proven track record of publishing top-rated mobile apps, telemedicine engines, and mentoring developers.
+        </p>
       </div>
-      <h2 class="section-title">Work Experience</h2>
-      <p class="section-subtitle">
-        Proven track record of publishing top-rated mobile apps, telemedicine engines, and mentoring developers.
-      </p>
 
       <div class="timeline" id="experience-container">
         <!-- Rendered dynamically -->
@@ -175,22 +219,26 @@
   </section>
 
   <!-- Education & Certifications Section -->
-  <section id="education">
+  <section id="education" class="section-padded">
     <div class="container">
-      <div class="section-tag">
-        <i data-feather="award"></i>
-        <span>Qualifications</span>
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">qualifications!</span>
+        <div class="section-tag">
+          <i data-feather="award"></i>
+          <span>Qualifications</span>
+        </div>
+        <h2 class="section-title">Education & Certifications</h2>
+        <p class="section-subtitle">
+          Academic foundation and specialized professional certifications.
+        </p>
       </div>
-      <h2 class="section-title">Education & Certifications</h2>
-      <p class="section-subtitle">
-        Academic foundation and specialized professional certifications.
-      </p>
 
-      <div class="testimonials-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div class="qualifications-grid">
         <!-- Education Card -->
-        <div class="testimonial-card" id="education-card">
-          <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-primary);">
-            <i data-feather="book-open" style="margin-right: 0.5rem;"></i> Education
+        <div class="artsy-card qualification-card" id="education-card">
+          <div class="tape-strip top-left"></div>
+          <h3 class="card-header-title text-accent-primary">
+            <i data-feather="book-open"></i> Education
           </h3>
           <div id="education-container">
             <!-- Rendered dynamically -->
@@ -198,11 +246,12 @@
         </div>
 
         <!-- Certifications Card -->
-        <div class="testimonial-card" id="certifications-card">
-          <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-cyan);">
-            <i data-feather="check-circle" style="margin-right: 0.5rem;"></i> Certifications
+        <div class="artsy-card qualification-card" id="certifications-card">
+          <div class="tape-strip top-right"></div>
+          <h3 class="card-header-title text-accent-cyan">
+            <i data-feather="check-circle"></i> Certifications
           </h3>
-          <ul id="certifications-container" style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+          <ul id="certifications-container" class="certifications-list">
             <!-- Rendered dynamically -->
           </ul>
         </div>
@@ -211,26 +260,30 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section-padded">
     <div class="container">
-      <div class="section-tag">
-        <i data-feather="send"></i>
-        <span>Get in Touch</span>
+      <div class="artsy-section-header">
+        <span class="handwritten-tag">say hi!</span>
+        <div class="section-tag">
+          <i data-feather="send"></i>
+          <span>Get in Touch</span>
+        </div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          Looking for a senior React Native developer to lead your mobile app or AI integration? Let's discuss your product.
+        </p>
       </div>
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-subtitle">
-        Looking for a senior React Native developer to lead your mobile app or AI integration? Let's discuss your product.
-      </p>
 
       <div class="contact-grid">
-        <div class="contact-info-card">
-          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Contact Details</h3>
+        <div class="artsy-card contact-info-card">
+          <div class="tape-strip top-left"></div>
+          <h3 class="contact-card-title">Contact Details</h3>
 
           <div class="contact-item">
             <div class="contact-icon"><i data-feather="mail"></i></div>
             <div>
               <div class="contact-label">Email</div>
-              <a href="#" id="contact-email" class="contact-value">Pavanuppu5@gmail.com</a>
+              <a href="#" id="contact-email" class="contact-value">Shanmukapawanuppu@gmail.com</a>
             </div>
           </div>
 
@@ -251,7 +304,8 @@
           </div>
         </div>
 
-        <div class="contact-form-card">
+        <div class="artsy-card contact-form-card">
+          <div class="tape-strip top-right"></div>
           <form id="contact-form">
             <div class="form-group">
               <label for="name" class="form-label">Your Name</label>
@@ -268,7 +322,7 @@
               <textarea id="message" class="form-textarea" placeholder="Hi Shanmukapavan, I'd like to discuss a React Native app project..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" class="btn btn-primary btn-block">
               <span>Send Message</span>
               <i data-feather="send"></i>
             </button>
@@ -285,10 +339,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <div>
+      <div class="footer-left">
         © <span id="year"></span> <strong id="footer-name">Shanmukapavan Uppu</strong>. All rights reserved.
       </div>
-      <div>
+      <div class="footer-right">
         React Native & AI Integrations Specialist
       </div>
     </div>
@@ -296,7 +350,7 @@
 
   <!-- Modal Component for Project Details -->
   <div class="modal-backdrop" id="project-modal">
-    <div class="modal-container">
+    <div class="modal-container artsy-modal">
       <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
         <i data-feather="x"></i>
       </button>

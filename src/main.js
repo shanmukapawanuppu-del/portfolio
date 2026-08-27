@@ -54,7 +54,7 @@ function initTheme() {
 function renderPersonalDetails() {
   const { personal, socials } = portfolioData;
 
-  document.getElementById('logo-text').textContent = `${personal.name.split(' ')[0]}.dev`;
+  document.getElementById('logo-text').textContent = 'shanmukapavanuppu.dev';
   document.getElementById('hero-name').textContent = personal.name;
   document.getElementById('hero-title-tag').textContent = personal.title.split('|')[0].trim();
   document.getElementById('hero-bio').textContent = personal.bio;
@@ -74,8 +74,9 @@ function renderPersonalDetails() {
   document.getElementById('contact-location').textContent = personal.location;
 
   // Avatar & Resume
-  if (personal.avatar) {
-    document.getElementById('hero-avatar').src = personal.avatar;
+  const avatarEl = document.getElementById('hero-avatar');
+  if (avatarEl && personal.avatar) {
+    avatarEl.src = personal.avatar;
   }
   if (personal.resumeUrl) {
     document.getElementById('resume-link').href = personal.resumeUrl;
